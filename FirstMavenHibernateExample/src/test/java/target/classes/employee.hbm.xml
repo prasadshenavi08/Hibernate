@@ -1,0 +1,16 @@
+
+<hibernate-mapping> 
+   <class name = "com.demo.Employee" table = "EMPLOYEE004">     
+      <meta attribute = "class-description"> 
+         This class contains the employee detail.  
+      </meta> 
+       
+      <id name = "empid" type = "int" column = "id"> 
+         <generator class="identity"/> 
+      </id> 
+       
+      <property name = "name" column = "empname" type = "string"/> 
+      <property name = "salary" column = "empsalary" type = "float"/> 
+       
+   </class> 
+</hibernate-mapping>
