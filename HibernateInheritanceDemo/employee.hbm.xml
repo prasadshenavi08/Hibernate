@@ -1,0 +1,23 @@
+
+<hibernate-mapping>
+<classname="com.demo.Employee" table="emp121" discriminator-value="empolyee">
+<id name="id">
+<generator class="increment"></generator>
+</id>
+
+<discriminator column="emptype" type="string"></discriminator>
+<property name="name"></property>
+
+<subclass name="com.demo.RegularEmployee"discriminator-value="regularemployee">
+<property name="salary"></property>
+<property name="bonus"></property>
+</subclass>
+
+<subclass name="com.demo.ContractEmployee"discriminator-value="contactemployee">
+<property name="payperhour"></property>
+<property name="duration"></property>
+</subclass>
+
+</class>
+
+</hibernate-mapping>
